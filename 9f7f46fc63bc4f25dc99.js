@@ -335,16 +335,16 @@
                                 r3["createElement"](EP, null, "Процент\x20побед"),
                                 r3["createElement"](EI, null, (0x0 === M1["ctg"]["total_games_played"] ? 0x0 : (M1["ctg"]["total_games_won"] / M1["ctg"]["total_games_played"]) * 0x64)["toFixed"](0x2) + "%")
                             ),
-                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Kills"), r3["createElement"](EI, null, M1["ctg"]["total_kills"])),
-                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Deaths"), r3["createElement"](EI, null, M1["ctg"]["total_deaths"])),
+                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Убийства"), r3["createElement"](EI, null, M1["ctg"]["total_kills"])),
+                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Смерти"), r3["createElement"](EI, null, M1["ctg"]["total_deaths"])),
                             r3["createElement"](
                                 EX,
                                 null,
                                 r3["createElement"](EP, null, "KDR"),
                                 r3["createElement"](EI, null, 0x0 === M1["ctg"]["total_deaths"] ? (0x0 === M1["ctg"]["total_kills"] ? 0x0 : "Infinity") : (M1["ctg"]["total_kills"] / M1["ctg"]["total_deaths"])["toFixed"](0x2))
                             ),
-                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Captures"), r3["createElement"](EI, null, M1["ctg"]["total_captures"])),
-                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Score"), r3["createElement"](EI, null, M1["ctg"]["total_score"]))
+                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Захваты кристаллов"), r3["createElement"](EI, null, M1["ctg"]["total_captures"])),
+                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Очки"), r3["createElement"](EI, null, M1["ctg"]["total_score"]))
                         );
                     else {
                         if (M9 === rH["ZP"]["BATTLE_ROYALE"]) {
@@ -353,43 +353,43 @@
                             MR = r3["createElement"](
                                 EN,
                                 null,
-                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Games\x20Played"), r3["createElement"](EI, null, M1["br"]["total_games_played"])),
-                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Games\x20Won"), r3["createElement"](EI, null, M1["br"]["total_games_won"])),
+                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Игр\x20сыграно"), r3["createElement"](EI, null, M1["br"]["total_games_played"])),
+                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Игр\x20выиграно"), r3["createElement"](EI, null, M1["br"]["total_games_won"])),
                                 r3["createElement"](
                                     EX,
                                     null,
-                                    r3["createElement"](EP, null, "Win\x20%"),
+                                    r3["createElement"](EP, null, "Процент\x20побед"),
                                     r3["createElement"](EI, null, (0x0 === M1["br"]["total_games_played"] ? 0x0 : (M1["br"]["total_games_won"] / M1["br"]["total_games_played"]) * 0x64)["toFixed"](0x2) + "%")
                                 ),
-                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Kills"), r3["createElement"](EI, null, M1["br"]["total_kills"])),
-                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Deaths"), r3["createElement"](EI, null, M1["br"]["total_deaths"])),
+                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Убийства"), r3["createElement"](EI, null, M1["br"]["total_kills"])),
+                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Смерти"), r3["createElement"](EI, null, M1["br"]["total_deaths"])),
                                 r3["createElement"](
                                     EX,
                                     null,
                                     r3["createElement"](EP, null, "KDR"),
                                     r3["createElement"](EI, null, 0x0 === M1["br"]["total_deaths"] ? (0x0 === M1["br"]["total_kills"] ? 0x0 : "Infinity") : (M1["br"]["total_kills"] / M1["br"]["total_deaths"])["toFixed"](0x2))
                                 ),
-                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Time\x20Survived"), r3["createElement"](EI, null, MC)),
-                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Score"), r3["createElement"](EI, null, M1["br"]["total_score"]))
+                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Время\x20жизни"), r3["createElement"](EI, null, MC)),
+                                r3["createElement"](EX, null, r3["createElement"](EP, null, "Очки"), r3["createElement"](EI, null, M1["br"]["total_score"]))
                             );
                         }
                     }
                     var MY =
                             AW === r6["Q"]["Oe"] && AG === rH["ZP"]["CAPTURE_THE_GEMS"]
                                 ? r3["createElement"](r3["Fragment"], null, r3["createElement"](E3, null, r3["createElement"](rT["G"], { icon: rR["LM3"], spin: !0x0 })))
-                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](Eq, { src: rI }), r3["createElement"]("div", null, "Capture\x20The\x20Gems")),
+                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](Eq, { src: rI }), r3["createElement"]("div", null, "Захват\x20кристаллов")),
                         MB =
                             AW === r6["Q"]["Oe"] && AG === rH["ZP"]["BATTLE_ROYALE"]
                                 ? r3["createElement"](r3["Fragment"], null, r3["createElement"](E3, null, r3["createElement"](rT["G"], { icon: rR["LM3"], spin: !0x0 })))
-                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](EU, { src: rP }), r3["createElement"]("div", null, "Battle\x20Royale")),
+                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](EU, { src: rP }), r3["createElement"]("div", null, "Королевская\x20битва")),
                         MF =
                             AW === r6["Q"]["Oe"] && AG === rH["ZP"]["FREE_FOR_ALL"]
                                 ? r3["createElement"](r3["Fragment"], null, r3["createElement"](E3, null, r3["createElement"](rT["G"], { icon: rR["LM3"], spin: !0x0 })))
-                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](EU, { src: rP }), r3["createElement"]("div", null, "Free\x20For\x20All")),
+                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](EU, { src: rP }), r3["createElement"]("div", null, "Каждый\x20сам\x20за\x20себя")),
                         MZ =
                             AW === r6["Q"]["Oe"] && AG === rH["ZP"]["SURVIVAL"]
                                 ? r3["createElement"](r3["Fragment"], null, r3["createElement"](E3, null, r3["createElement"](rT["G"], { icon: rR["LM3"], spin: !0x0 })))
-                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](Ew, { src: rD["Z"]["he"](rN["q"]["de"] + rX["k"]["ye"]) }), r3["createElement"](EO, null, "Survival")),
+                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](Ew, { src: rD["Z"]["he"](rN["q"]["de"] + rX["k"]["ye"]) }), r3["createElement"](EO, null, "Выживание")),
                         Mv =
                             M0 && M1["level"] >= 0x5
                                 ? r3["createElement"](
@@ -404,11 +404,11 @@
                                       },
                                       MZ
                                   )
-                                : r3["createElement"](E0, { style: { marginTop: 0xa, width: "100%" } }, r3["createElement"](E1, null, "Unlock\x20at\x20Level\x205"), MZ),
+                                : r3["createElement"](E0, { style: { marginTop: 0xa, width: "100%" } }, r3["createElement"](E1, null, "Открывается\x20на\x20уровне\x205"), MZ),
                         My =
                             AW === r6["Q"]["Oe"] && AG === rH["ZP"]["CUSTOM_GAME"]
                                 ? r3["createElement"](r3["Fragment"], null, r3["createElement"](E3, null, r3["createElement"](rT["G"], { icon: rR["LM3"], spin: !0x0 })))
-                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](Ew, { src: rD["Z"]["he"](rN["q"]["de"] + rX["k"]["rn"]) }), r3["createElement"](EO, null, "Custom\x20Game")),
+                                : r3["createElement"](r3["Fragment"], null, r3["createElement"](Ew, { src: rD["Z"]["he"](rN["q"]["de"] + rX["k"]["rn"]) }), r3["createElement"](EO, null, "Приватный\x20сервер")),
                         MD =
                             M0 && M1["level"] >= 0x3c
                                 ? r3["createElement"](
@@ -423,12 +423,12 @@
                                       },
                                       My
                                   )
-                                : r3["createElement"](E0, { style: { marginTop: 0xa, width: "100%" } }, r3["createElement"](E1, null, "Unlock\x20at\x20Level\x2060"), My),
+                                : r3["createElement"](E0, { style: { marginTop: 0xa, width: "100%" } }, r3["createElement"](E1, null, "Открывается\x20на\x20уровне\x2060"), My),
                         MN = [
-                            { value: rB["m"]["Ae"], label: "US\x20West\x20(San\x20Francisco)" },
-                            { value: rB["m"]["Ne"], label: "US\x20East\x20(New\x20York\x20City)" },
-                            { value: rB["m"]["Ce"], label: "Europe\x20(Amsterdam)" },
-                            { value: rB["m"]["Re"], label: "Asia\x20(Singapore)" },
+                            { value: rB["m"]["Ae"], label: "США\x20Запад\x20(Сан-Франциско)" },
+                            { value: rB["m"]["Ne"], label: "США\x20Восток\x20(Нью-йорк)" },
+                            { value: rB["m"]["Ce"], label: "Европа\x20(Амстердам)" },
+                            { value: rB["m"]["Re"], label: "Азия\x20(Сингапур)" },
                         ],
                         MX = (0x0, r3["useState"])(!0x1),
                         MP = MX[0x0],
@@ -447,7 +447,7 @@
                                     r3["createElement"](
                                         EC,
                                         null,
-                                        M0 ? null : r3["createElement"](EA, { to: "/account" }, r3["createElement"](EM, null, r3["createElement"](rT["G"], { icon: rR["bkV"] })), r3["createElement"](Ek, null, "Login\x20to\x20unlock!")),
+                                        M0 ? null : r3["createElement"](EA, { to: "/account" }, r3["createElement"](EM, null, r3["createElement"](rT["G"], { icon: rR["bkV"] })), r3["createElement"](Ek, null, "Зайди\x20в\x20аккаунт\x20чтобы\x20играть")),
                                         r3["createElement"](
                                             ED,
                                             null,
@@ -475,7 +475,7 @@
                                                         ME(rH["ZP"]["CAPTURE_THE_GEMS"]);
                                                     },
                                                 },
-                                                "Capture\x20The\x20Gems"
+                                                "Захват\x20кристаллов"
                                             ),
                                             r3["createElement"](
                                                 ES,
@@ -485,7 +485,7 @@
                                                         ME(rH["ZP"]["BATTLE_ROYALE"]);
                                                     },
                                                 },
-                                                "Battle\x20Royale"
+                                                "Королевская\x20битва"
                                             )
                                         ),
                                         MR
@@ -500,7 +500,7 @@
                                         r3["createElement"](
                                             rV,
                                             null,
-                                            r3["createElement"](rG, null, "Region"),
+                                            r3["createElement"](rG, null, "Регион"),
                                             r3["createElement"](rM, {
                                                 options: MN,
                                                 value: MN[AS],
@@ -518,7 +518,7 @@
                                                 r3["createElement"](
                                                     rv["AW"],
                                                     { exact: !0x0, path: "/" },
-                                                    r3["createElement"](rG, null, "Play"),
+                                                    r3["createElement"](rG, null, "Играть"),
                                                     r3["createElement"](
                                                         rJ,
                                                         null,
@@ -561,7 +561,7 @@
                                                 r3["createElement"](
                                                     rv["AW"],
                                                     { exact: !0x0, path: "/experimental" },
-                                                    r3["createElement"](rG, null, "Play\x20Experimental\x20Games"),
+                                                    r3["createElement"](rG, null, "Режимы в бета-тестировании"),
                                                     r3["createElement"](
                                                         rJ,
                                                         null,
