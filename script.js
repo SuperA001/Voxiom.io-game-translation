@@ -15,17 +15,22 @@
 
 // @run-at       document-start
 // @require      https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/9f7f46fc63bc4f25dc99.js
+// @downloadURL  https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/script.js
 // @updateURL    https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/script.js
 // ==/UserScript==
 
-// URL вашего файла JavaScript
-var newScriptUrl = "https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/9f7f46fc63bc4f25dc99.js";
 
-// Функция для замены файла JavaScript
-function require (resource_url) {
-  var script = document.createElement("script");
-  script.src = resource_url;
-  document.head.appendChild(script);}
+(function() {
+    'use strict';
 
-// Вызов функции для замены файла JavaScript
-require(newScriptUrl);
+    window.addEventListener('DOMContentLoaded', function() {
+        var scriptElements = document.getElementsByTagName('script');
+        for (var i = 0; i < scriptElements.length; i++) {
+            var script = scriptElements[i];
+            if (script.src === '/./package/8e8bb6471203b5ba21d6.js') {
+                script.src = 'https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/source-2.js';
+                break;
+            }
+        }
+    });
+})();
