@@ -24,13 +24,23 @@
     'use strict';
 
     window.addEventListener('DOMContentLoaded', function() {
-        var scriptElements = document.getElementsByTagName('script');
-        for (var i = 0; i < scriptElements.length; i++) {
-            var script = scriptElements[i];
-            if (script.src === '/./package/8e8bb6471203b5ba21d6.js') {
-                script.src = 'https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/source-2.js';
-                break;
+        GM_xmlhttpRequest({
+            method: 'GET',
+            url: 'https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/source-2.js',
+            onload: function(response) {
+                var newScript = document.createElement('script');
+                newScript.textContent = response.responseText;
+
+                var scriptElements = document.head.getElementsByTagName('script');
+                for (var i = 0; i < scriptElements.length; i++) {
+                    var script = scriptElements[i];
+                    if (script.src === "/./package/8e8bb6471203b5ba21d6.js" && script.hasAttribute('defer')) {
+                        script.parentNode.insertBefore(newScript, script);
+                        script.parentNode.removeChild(script);
+                        break;
+                    }
+                }
             }
-        }
+        });
     });
 })();
