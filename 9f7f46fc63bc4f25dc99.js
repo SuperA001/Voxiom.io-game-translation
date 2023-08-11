@@ -327,12 +327,12 @@
                         MR = r3["createElement"](
                             EN,
                             null,
-                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Игр\x20сыграно"), r3["createElement"](EI, null, M1["ctg"]["total_games_played"])),
-                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Игр\x20побеждено"), r3["createElement"](EI, null, M1["ctg"]["total_games_won"])),
+                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Games\x20Played"), r3["createElement"](EI, null, M1["ctg"]["total_games_played"])),
+                            r3["createElement"](EX, null, r3["createElement"](EP, null, "Games\x20Won"), r3["createElement"](EI, null, M1["ctg"]["total_games_won"])),
                             r3["createElement"](
                                 EX,
                                 null,
-                                r3["createElement"](EP, null, "Процент\x20побед"),
+                                r3["createElement"](EP, null, "Win\x20%"),
                                 r3["createElement"](EI, null, (0x0 === M1["ctg"]["total_games_played"] ? 0x0 : (M1["ctg"]["total_games_won"] / M1["ctg"]["total_games_played"]) * 0x64)["toFixed"](0x2) + "%")
                             ),
                             r3["createElement"](EX, null, r3["createElement"](EP, null, "Убийства"), r3["createElement"](EI, null, M1["ctg"]["total_kills"])),
