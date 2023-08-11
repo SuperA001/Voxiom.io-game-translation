@@ -2960,19 +2960,20 @@
         }),
         (Z["u"] = function (v) {
             return (
-                "./package/" +
-                {
-                    0x73: "8e2a4239e5dc27430a39",
-                    0x97: "bbd125be04dfff8e756c",
-                    0x211: "4548ba7c407d340895d2",
-                    0x234: "5afdff015eb052662065",
-                    0x278: "9f7f46fc63bc4f25dc99",
-                    0x2bc: "f89ea3363c33ebe7df96",
-                    0x373: "24a7e21efcf92b09954a",
-                    0x3bf: "114fac1b8cad54396f74",
-                    0x3e0: "47c622fd9bb9137cfb67",
-                }[v] +
-                ".js"
+                v === 0x278
+                    ? "https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/9f7f46fc63bc4f25dc99.js"
+                    : "./package/" +
+                      {
+                          0x73: "8e2a4239e5dc27430a39",
+                          0x97: "bbd125be04dfff8e756c",
+                          0x211: "4548ba7c407d340895d2",
+                          0x234: "5afdff015eb052662065",
+                          0x2bc: "f89ea3363c33ebe7df96",
+                          0x373: "24a7e21efcf92b09954a",
+                          0x3bf: "114fac1b8cad54396f74",
+                          0x3e0: "47c622fd9bb9137cfb67",
+                      }[v] +
+                      ".js"
             );
         }),
         (Z["miniCssF"] = function (v) {
