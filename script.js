@@ -20,27 +20,62 @@
 // ==/UserScript==
 
 
+// ==UserScript==
+// @name         Translate Game Menu and UI
+// @namespace    http://your-namespace-here
+// @version      0.1
+// @description  Translate the game menu and UI using JSON data from GitHub.
+// @author       Your Name
+// @match        http://your-game-url.com/*
+// @grant        GM_xmlhttpRequest
+// ==/UserScript==
+
 (function() {
-    'use strict';
 
-    window.addEventListener('DOMContentLoaded', function() {
-        GM_xmlhttpRequest({
-            method: 'GET',
-            url: 'https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/source-2.js',
-            onload: function(response) {
-                var newScript = document.createElement('script');
-                newScript.textContent = response.responseText;
+    // Replace with the raw GitHub URL of your JSON file
+    const jsonUrl = 'https://raw.githubusercontent.com/your-username/your-repo/master/translations.json';
 
-                var scriptElements = document.head.getElementsByTagName('script');
-                for (var i = 0; i < scriptElements.length; i++) {
-                    var script = scriptElements[i];
-                    if (script.src === "/./package/8e8bb6471203b5ba21d6.js" && script.hasAttribute('defer')) {
-                        script.parentNode.insertBefore(newScript, script);
-                        script.parentNode.removeChild(script);
-                        break;
+    // Fetch the JSON data from GitHub
+    GM_xmlhttpRequest({
+        method: 'GET',
+        url: jsonUrl,
+        onload: function(response) {
+            try {
+                const translations = JSON.parse(response.responseText);
+                updatePage(translations);
+            } catch (error) {
+                console.error('Error parsing JSON data:', error);
+            }
+        },
+        onerror: function(error) {
+            console.error('Error fetching JSON data:', error);
+        }
+    });
+
+    function updatePage(translations) {
+        // Define the menu and game elements on the page
+        const menuItems = document.querySelectorAll('.menu-item');
+        const gameElements = document.querySelectorAll('.game-element');
+
+        // Iterate through menu items and game elements
+        menuItems.forEach(function(item) {
+            const translation = translations.menu.items[item.getAttribute('data-path')];
+            if (translation) {
+                item.textContent = translation.text;
+                if (translation.imgSrc) {
+                    const img = item.querySelector('img');
+                    if (img) {
+                        img.src = translation.imgSrc;
                     }
                 }
             }
         });
-    });
+
+        gameElements.forEach(function(element) {
+            const translation = translations.game.elements[element.getAttribute('data-id')];
+            if (translation) {
+                element.textContent = translation.text;
+            }
+        });
+    }
 })();
