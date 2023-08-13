@@ -33,7 +33,7 @@
 (function() {
 
     // Replace with the raw GitHub URL of your JSON file
-    const jsonUrl = 'https://raw.githubusercontent.com/your-username/your-repo/master/translations.json';
+    const jsonUrl = 'https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/translate.json';
 
     // Fetch the JSON data from GitHub
     GM_xmlhttpRequest({
@@ -54,8 +54,7 @@
 
     function updatePage(translations) {
         // Define the menu and game elements on the page
-        const menuItems = document.querySelectorAll('.menu-item');
-        const gameElements = document.querySelectorAll('.game-element');
+        const menuItems = document.querySelectorAll('.vox-dropdown .Dropdown-option');s
 
         // Iterate through menu items and game elements
         menuItems.forEach(function(item) {
