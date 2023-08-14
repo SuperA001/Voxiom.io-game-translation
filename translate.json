@@ -37,15 +37,15 @@
         }]
     },
     {
-      "class": "another-class",
+      "class": "sc-jJoQJp fRtCid",
       "values": [
         {
-          "original": "Goodbye",
-          "translation": "До свидания"
+          "original": "Region",
+          "translation": "Регион"
         },
         {
-          "original": "Welcome",
-          "translation": "Добро пожаловать"
+          "original": "Play",
+          "translation": "Играть"
         }
       ]
     }
