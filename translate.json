@@ -1,7 +1,7 @@
 {
   "translations": [
     {
-      "class": ["sc-lcepkR iwRvvA"],
+      "class": "sc-lcepkR iwRvvA",
       "values": [
         {
           "original": "Games Played",
@@ -37,7 +37,7 @@
         }]
     },
     {
-      "class": ["sc-jJoQJp fRtCid"],
+      "class": "sc-jJoQJp fRtCid",
       "values": [
         {
           "original": "Region",

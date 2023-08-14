@@ -21,11 +21,11 @@
 
      for (var i = 0; i < elements.length; i++) {
        var element = elements[i];
-       var classNames = element.getAttribute('class').split(' '); // Разделяем классы по пробелу
+       var classNames = element.getAttribute('class').split(' ');
 
        for (var k = 0; k < classNames.length; k++) {
          var className = classNames[k];
-         var translation = translations.find(t => t.class === className);
+         var translation = translations.find(t => t.classes && t.classes.includes(className)); // Исправлено здесь
 
          if (!translation) {
            continue;
