@@ -1,7 +1,7 @@
 {
   "translations": [
     {
-      "class": ["sc-lcepkR iwRvvA"],
+      "class": "sc-lcepkR iwRvvA",
       "values": [
         {
           "original": "Games Played",
@@ -37,7 +37,7 @@
         }]
     },
     {
-      "class": ["sc-jJoQJp fRtCid"],
+      "class": "sc-jJoQJp fRtCid",
       "values": [
         {
           "original": "Region",
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "class": ["sc-hiCibw igNAJT"],
+      "class": "sc-hiCibw igNAJT",
       "values": [
         {
           "original": "<div>Capture The Gems</div>",
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "class": ["Dropdown-option", "Dropdown-placeholder is-selected"],
+      "class": "Dropdown-option",
       "values": [
         {
           "original": "US West (San Francisco)",
@@ -68,9 +68,36 @@
         {
           "original": "US East (New York City)",
           "translation": "США Восток (Нью-Йорк)"
+        },
+        {
+          "original": "Europe (Amsterdam)",
+          "translation": "Европа (Амстердам)"
+        },
+        {
+          "original": "Asia (Singapore)",
+          "translation": "Азия (Сингапур)"
         }
       ]
-    }
+    },
+    {
+      "class": "Dropdown-placeholder is-selected",
+      "values": [
+        {
+          "original": "US West (San Francisco)",
+          "translation": "США Запад (Сан-Франциско)"
+        },
+        {
+          "original": "US East (New York City)",
+          "translation": "США Восток (Нью-Йорк)"
+        },
+        {
+          "original": "Europe (Amsterdam)",
+          "translation": "Европа (Амстердам)"
+        },
+        {
+          "original": "Asia (Singapore)",
+          "translation": "Азия (Сингапур)"
+        }
   ]
 }
  
