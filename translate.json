@@ -34,8 +34,7 @@
         {
           "original": "Scores",
           "translation": "Очки"
-        }
-      ]
+        }]
     },
     {
       "class": "another-class",
@@ -52,4 +51,4 @@
     }
   ]
 }
-
+ 
