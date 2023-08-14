@@ -3,8 +3,14 @@
 // @namespace    your-namespace
 // @version      1.0
 // @description  Русифицирует веб-игру на основе JSON-файла с переводами
-// @match        https://voxiom.io/*  // Замени на URL-адрес игры
-// @grant        none
+// @match        https://voxiom.io/*
+// @grant        unsafeWindow
+// @grant        GM_xmlhttpRequest
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_deleteValue
+// @grant        GM_listValues
+// @run-at       document-end
 // ==/UserScript==
 
 (function() {
@@ -30,8 +36,8 @@
       for (var j = 0; j < translation.values.length; j++) {
         var value = translation.values[j];
 
-        if (element.innerText === value.original) {
-          element.innerText = value.translation;
+        if (element.textContent.trim() === value.original) {
+          element.textContent = value.translation;
         }
       }
     }
