@@ -10,7 +10,31 @@
         {
           "original": "Games Won",
           "translation": "Игр выиграно"
-        }
+        },
+        {
+          "original": "Win %",
+          "translation": "Процент побед"
+        },
+        {
+          "original": "Kills",
+          "translation": "Убийства"
+        },
+        {
+          "original": "Deaths",
+          "translation": "Смерти"
+        },
+        {
+          "original": "KDR",
+          "translation": "KDR"
+        },
+        {
+          "original": "Captures",
+          "translation": "Захваты"
+        },
+        {
+          "original": "Scores",
+          "translation": "Очки"
+        },
       ]
     },
     {

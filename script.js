@@ -38,7 +38,7 @@
   }
 
   function loadTranslations() {
-    fetch('https://raw.githubusercontent.com/username/repository/master/translations.json')
+    fetch('https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/translate.json')
       .then(response => response.json())
       .then(data => {
         updateTranslations(data.translations);
