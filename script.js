@@ -16,32 +16,35 @@
 (function() {
   'use strict';
 
-  function updateTranslations(translations) {
-    var elements = document.querySelectorAll('[class]');
+   function updateTranslations(translations) {
+     var elements = document.querySelectorAll('[class]');
 
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      var className = element.getAttribute('class');
+     for (var i = 0; i < elements.length; i++) {
+       var element = elements[i];
+       var classNames = element.getAttribute('class').split(' '); // Разделяем классы по пробелу
 
-      var translation = translations.find(t => t.class === className);
+       for (var k = 0; k < classNames.length; k++) {
+         var className = classNames[k];
+         var translation = translations.find(t => t.class === className);
 
-      if (!translation) {
-        continue;
-      }
+         if (!translation) {
+           continue;
+         }
 
-      if (element.getElementsByTagName('img').length > 0) {
-        continue;
-      }
+         if (element.getElementsByTagName('img').length > 0) {
+           continue;
+         }
 
-      for (var j = 0; j < translation.values.length; j++) {
-        var value = translation.values[j];
+         for (var j = 0; j < translation.values.length; j++) {
+           var value = translation.values[j];
 
-        if (element.textContent.trim() === value.original) {
-          element.textContent = value.translation;
-        }
-      }
-    }
-  }
+           if (element.textContent.trim() === value.original) {
+             element.textContent = value.translation;
+           }
+         }
+       }
+     }
+   }
 
   function loadTranslations() {
     fetch('https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/translate.json')
