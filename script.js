@@ -10,47 +10,45 @@
 // @grant        GM_getValue
 // @grant        GM_deleteValue
 // @grant        GM_listValues
-// @run-at       document-end
+// @run-at       document-start
 // ==/UserScript==
 
 (function() {
   'use strict';
 
-   function updateTranslations(translations) {
-     var elements = document.querySelectorAll('[class]');
+  function updateTranslations(translations) {
+    var elements = document.querySelectorAll('[class]');
 
-     for (var i = 0; i < elements.length; i++) {
-       var element = elements[i];
-       var classNames = element.getAttribute('class').split(' ');
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var className = element.getAttribute('class');
 
-       for (var k = 0; k < classNames.length; k++) {
-         var className = classNames[k];
-         var translation = translations.find(t => t.classes && t.classes.includes(className)); // Исправлено здесь
+      var translation = translations.find(t => t.class === className);
 
-         if (!translation) {
-           continue;
-         }
+      if (!translation) {
+        continue;
+      }
 
-         if (element.getElementsByTagName('img').length > 0) {
-           continue;
-         }
+      if (element.getElementsByTagName('img').length > 0) {
+        continue;
+      }
 
-         for (var j = 0; j < translation.values.length; j++) {
-           var value = translation.values[j];
+      for (var j = 0; j < translation.values.length; j++) {
+        var value = translation.values[j];
 
-           if (element.textContent.trim() === value.original) {
-             element.textContent = value.translation;
-           }
-         }
-       }
-     }
-   }
+        if (element.textContent.trim() === value.original) {
+          element.textContent = value.translation;
+        }
+      }
+    }
+  }
 
   function loadTranslations() {
     fetch('https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/translate.json')
       .then(response => response.json())
       .then(data => {
         updateTranslations(data.translations);
+        console.log("Загружено");
       })
       .catch(error => {
         console.error('Ошибка загрузки JSON:', error);
@@ -59,5 +57,5 @@
 
   // Обновляем переводы при загрузке страницы и каждые 5 секунд
   window.addEventListener('load', loadTranslations);
-  setInterval(loadTranslations, 5000);
+  setInterval(loadTranslations, 500);
 })();
