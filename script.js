@@ -1,80 +1,54 @@
 // ==UserScript==
-// @name         New Userscript
-// @namespace    http://tampermonkey.net/
-// @version      0.2
-// @description  try to take over the world!
-// @author       You
-// @match        https://voxiom.io/
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=voxiom.io
-// @grant        unsafeWindow
-// @grant        GM_xmlhttpRequest
-// @grant        GM_setValue
-// @grant        GM_getValue
-// @grant        GM_deleteValue
-// @grant        GM_listValues
-
-// @run-at       document-start
-// @require      https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/9f7f46fc63bc4f25dc99.js
-// @downloadURL  https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/script.js
-// @updateURL    https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/script.js
-// ==/UserScript==
-
-
-// ==UserScript==
-// @name         Translate Game Menu and UI
-// @namespace    http://your-namespace-here
-// @version      0.1
-// @description  Translate the game menu and UI using JSON data from GitHub.
-// @author       Your Name
-// @match        http://your-game-url.com/*
-// @grant        GM_xmlhttpRequest
+// @name         Русификатор для веб-игры
+// @namespace    your-namespace
+// @version      1.0
+// @description  Русифицирует веб-игру на основе JSON-файла с переводами
+// @match        https://voxiom.io/*  // Замени на URL-адрес игры
+// @grant        none
 // ==/UserScript==
 
 (function() {
+  'use strict';
 
-    // Replace with the raw GitHub URL of your JSON file
-    const jsonUrl = 'https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/translate.json';
+  function updateTranslations(translations) {
+    var elements = document.querySelectorAll('[class]');
 
-    // Fetch the JSON data from GitHub
-    GM_xmlhttpRequest({
-        method: 'GET',
-        url: jsonUrl,
-        onload: function(response) {
-            try {
-                const translations = JSON.parse(response.responseText);
-                updatePage(translations);
-            } catch (error) {
-                console.error('Error parsing JSON data:', error);
-            }
-        },
-        onerror: function(error) {
-            console.error('Error fetching JSON data:', error);
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var className = element.getAttribute('class');
+
+      var translation = translations.find(t => t.class === className);
+
+      if (!translation) {
+        continue;
+      }
+
+      if (element.getElementsByTagName('img').length > 0) {
+        continue;
+      }
+
+      for (var j = 0; j < translation.values.length; j++) {
+        var value = translation.values[j];
+
+        if (element.innerText === value.original) {
+          element.innerText = value.translation;
         }
-    });
-
-    function updatePage(translations) {
-        // Define the menu and game elements on the page
-        const menuItems = document.querySelectorAll('.vox-dropdown .Dropdown-option');s
-
-        // Iterate through menu items and game elements
-        menuItems.forEach(function(item) {
-            const translation = translations.menu.items[item.getAttribute('data-path')];
-            if (translation) {
-                item.textContent = translation.text;
-                if (translation.imgSrc) {
-                    const img = item.querySelector('img');
-                    if (img) {
-                        img.src = translation.imgSrc;
-                    }
-                }
-            }
-        });
-
-        gameElements.forEach(function(element) {
-            const translation = translations.game.elements[element.getAttribute('data-id')];
-            if (translation) {
-                element.textContent = translation.text;
-            }
-        });
+      }
     }
+  }
+
+  function loadTranslations() {
+    fetch('https://raw.githubusercontent.com/username/repository/master/translations.json')
+      .then(response => response.json())
+      .then(data => {
+        updateTranslations(data.translations);
+      })
+      .catch(error => {
+        console.error('Ошибка загрузки JSON:', error);
+      });
+  }
+
+  // Обновляем переводы при загрузке страницы и каждые 5 секунд
+  window.addEventListener('load', loadTranslations);
+  setInterval(loadTranslations, 5000);
 })();
