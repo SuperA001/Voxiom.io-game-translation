@@ -34,6 +34,10 @@
         {
           "original": "Score",
           "translation": "Очки"
+        },
+        {
+          "original": "Time Survived",
+          "translation": "Время жизни"
         }
       ]
     },
@@ -98,15 +102,6 @@
         {
           "original": "Asia (Singapore)",
           "translation": "Азия (Сингапур)"
-        }
-      ]
-    },
-    {
-      "class": "sc-hiCibw igNAJT",
-      "values": [
-        {
-          "original": "Battle Royale",
-          "translation": "Королевская битва"
         }
       ]
     }
