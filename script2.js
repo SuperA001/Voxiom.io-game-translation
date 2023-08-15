@@ -17,7 +17,7 @@
   'use strict';
 
   function updateTranslations(translations) {
-    var elements = document.querySelectorAll('[class]');
+    var elements = document.querySelectorAll('[class], span, div');
 
     for (var i = 0; i < elements.length; i++) {
       var element = elements[i];
