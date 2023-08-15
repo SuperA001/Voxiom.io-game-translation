@@ -48,7 +48,6 @@
       .then(response => response.json())
       .then(data => {
         updateTranslations(data.translations);
-        console.log("Загружено");
       })
       .catch(error => {
         console.error('Ошибка загрузки JSON:', error);

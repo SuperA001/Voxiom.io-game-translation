@@ -1,31 +1,5 @@
 {
   "translations": [
-    {  "name": "Друзья и кланы",
-      "class": "sc-llYSUQ jIHuvv",
-      "values": [
-        {
-          "original": "\"Friends\"",
-          "translation": "Друзья"
-        },
-        {
-          "original": "\"Clans\"",
-          "translation": "Кланы"
-        }
-      ]
-    },
-    {  "name": "Друзья и кланы",
-      "class": "sc-llYSUQ jIHuvv active",
-      "values": [
-        {
-          "original": "Friends",
-          "translation": "Друзья"
-        },
-        {
-          "original": "Clans",
-          "translation": "Кланы"
-        }
-      ]
-    },
     {  "name": "Меню",
       "class": "sc-ctKHVw YECSn",
       "values": [
@@ -81,6 +55,15 @@
         {
           "original": "Updates",
           "translation": "Обновления"
+        }
+      ]
+    },
+    {
+      "class": "sc-dqhCBx bVefSq",
+      "values": [
+        {
+          "original": "Logout",
+          "translation": "Выход"
         }
       ]
     },
