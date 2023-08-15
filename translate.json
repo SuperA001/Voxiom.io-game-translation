@@ -29,6 +29,35 @@
         }
       ]
     },
+    {  "name": "Меню active",
+      "class": "sc-ctKHVw YECSn active",
+      "values": [
+        {
+          "original": "Game",
+          "translation": "Игра"
+        },
+        {
+          "original": "Account",
+          "translation": "Аккаунт"
+        },
+        {
+          "original": "Leaderboard",
+          "translation": "Таблица лидеров"
+        },
+        {
+          "original": "Loadouts",
+          "translation": "Склад"
+        },
+        {
+          "original": "Shop",
+          "translation": "Магазин"
+        },
+        {
+          "original": "Updates",
+          "translation": "Обновления"
+        }
+      ]
+    },
     {
       "class": "sc-jOxtWs exMOCY",
       "values": [
