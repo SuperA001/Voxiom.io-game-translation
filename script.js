@@ -34,15 +34,33 @@ let translator_url = "https://raw.githubusercontent.com/SuperA001/Voxiom.io-game
         continue;
       }
 
-      if (element.getElementsByTagName('img').length > 0) {
-        continue;
-      }
-
       for (var j = 0; j < translation.values.length; j++) {
         var value = translation.values[j];
 
         if (element.textContent.trim() === value.original) {
           element.textContent = value.translation;
+        }
+      }
+    }
+  }
+
+  function updateDivMessages(translations) {
+    var elements = document.querySelectorAll('[class]');
+
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var className = element.getAttribute('class')
+
+      var translation = translations.find(t => t.class === className);
+
+      if (!translation) {
+        continue;
+      }
+      
+      for (var j = 0; j < translation.values.length; j++) {
+        var value = translation.values[j];
+        if (document.querySelectorAll(`.${className} > div`)[j].innerText === value.original) {
+          document.querySelectorAll(`.${className} > div`)[j].innerText = value.translation;
         }
       }
     }

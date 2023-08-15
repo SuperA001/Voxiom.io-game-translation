@@ -199,6 +199,33 @@
           "translation": "Азия (Сингапур)"
         }
       ]
+    },
+    {
+      "class": "sc-hiCibw igNAJT",
+      "values": [
+        {
+          "original": "Capture The Gems",
+          "translation": "Захват криссталов"
+        },
+        {
+          "original": "Battle Royale",
+          "translation": "Королевская битва"
+        }
+      ]
+    },
+    {
+      "class": "sc-jIkXHa iKnwBi",
+      "values": [
+        {
+          "original": "Survival",
+          "translation": "Выживание"
+        },
+        {
+          "original": "Custom Game",
+          "translation": "Кастомный сервер"
+        }
+      ]
     }
+
   ]
 }
