@@ -98,18 +98,16 @@
         {
           "original": "Asia (Singapore)",
           "translation": "Азия (Сингапур)"
-        },
-        {
-      "class": "sc-hiCibw igNAJT",
-      "values": [
-        {
-          "original": "Capture The Gems",
-          "translation": "Захват кристаллов"
-        },
-        {
-          "original": "Battle Royale",
-          "translation": "Королевская битва"
-        }
-      ]
-    }
+        }]},
+    {
+  "class": "sc-hiCibw igNAJT",
+  "values": [
+    {
+      "original": "Capture The Gems",
+      "translation": "Захват кристаллов"
+    },
+    {
+      "original": "Battle Royale",
+      "translation": "Королевская битва"
+    }]}
   ]}
