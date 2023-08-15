@@ -16,7 +16,7 @@
 
 //Настройки
 let time = 500; //Время обновления перевода в мс
-translator_url = "https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/translate.json" //Ссылка на json файл с переводом. (Не рекомандуется трогать если у вас нету своего перевода)
+let translator_url = "https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/translate.json" //Ссылка на json файл с переводом. (Не рекомандуется трогать если у вас нету своего перевода)
 
 (function() {
   'use strict';
@@ -49,7 +49,7 @@ translator_url = "https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-tra
   }
 
   function loadTranslations() {
-    fetch('https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-translation/main/translate.json')
+    fetch(translator_url)
       .then(response => response.json())
       .then(data => {
         updateTranslations(data.translations);
@@ -60,5 +60,5 @@ translator_url = "https://raw.githubusercontent.com/SuperA001/Voxiom.io-game-tra
   }
 
   window.addEventListener('load', loadTranslations);
-  setInterval(loadTranslations, 500);
+  setInterval(loadTranslations, time);
 })();
