@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Русификатор для веб-игры
-// @namespace    your-namespace
-// @version      1.0
-// @description  Русифицирует веб-игру на основе JSON-файла с переводами
+// @name         Voxiom translator
+// @namespace    SuperA001
+// @version      0.1
+// @description  Русификатор игры voxiom.io
 // @match        https://voxiom.io/*
 // @grant        unsafeWindow
 // @grant        GM_xmlhttpRequest

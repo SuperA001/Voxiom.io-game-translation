@@ -1,5 +1,6 @@
 {
   "translations": [
+    //Menu
     {
       "class": "sc-lcepkR iwRvvA",
       "values": [
@@ -97,7 +98,26 @@
         {
           "original": "Asia (Singapore)",
           "translation": "Азия (Сингапур)"
-        }
+        },
+        {
+      "class": "Dropdown-placeholder is-selected",
+      "values": [
+        {
+          "original": "US West (San Francisco)",
+          "translation": "США Запад (Сан-Франциско)"
+        },
+        {
+          "original": "US East (New York City)",
+          "translation": "США Восток (Нью-Йорк)"
+        },
+        {
+          "original": "Europe (Amsterdam)",
+          "translation": "Европа (Амстердам)"
+        },
+        {
+          "original": "Asia (Singapore)",
+          "translation": "Азия (Сингапур)"
+        },
       ]
     }
   ]}
