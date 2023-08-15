@@ -29,6 +29,7 @@
         }
       ]
     },
+
     {  "name": "Меню active",
       "class": "sc-ctKHVw YECSn active",
       "values": [
@@ -136,6 +137,15 @@
         {
           "original": "Play",
           "translation": "Играть"
+        }
+      ]
+    },
+    {
+      "class": "sc-jObWnj jCtviM",
+      "values": [
+        {
+          "original": "Join our community",
+          "translation": "Присоединяйся к коммьюнити игры"
         }
       ]
     },
